@@ -205,6 +205,9 @@ class ValidationEngine:
             print(f"Warning: Could not load config from {config_path}: {e}")
             return {}
 
+
+    ### HERE IS STEP 1
+
     def validate_substitution_file(self, file_path: str) -> ValidationResult:
         """Perform comprehensive validation on a substitution file"""
         result = ValidationResult(file_path=file_path)
@@ -751,26 +754,3 @@ class ValidationEngine:
 
         return fixed_lines, fixes_applied
 
-# Example usage and testing
-if __name__ == "__main__":
-    # Create validation engine
-    engine = ValidationEngine()
-
-    # Example: Validate a substitution file
-    test_file = "C:/Users/mkeenan/Development/SLAC/Cryoplant/CryoplantApp/Db/2kcb/2kcb_AIs.substitutions"
-    if os.path.exists(test_file):
-        print(f"Validating: {test_file}")
-        result = engine.validate_substitution_file(test_file)
-
-        print(f"\nValidation Result: {'PASSED' if result.passed else 'FAILED'}")
-        print(f"Total Issues: {len(result.issues)}")
-        print(f"Critical: {len(result.get_issues_by_severity(Severity.CRITICAL))}")
-        print(f"Warnings: {len(result.get_issues_by_severity(Severity.WARNING))}")
-        print(f"Auto-fixable: {sum(1 for i in result.issues if i.auto_fixable)}")
-
-        # Show first few issues
-        for issue in result.issues[:5]:
-            print(f"\n[{issue.severity.value.upper()}] Line {issue.line_number}: {issue.message}")
-            if issue.suggested_value:
-                print(f"  Current: {issue.current_value}")
-                print(f"  Suggested: {issue.suggested_value}")

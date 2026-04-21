@@ -1,1 +1,7 @@
 INIT COMMIT
+
+
+perform validation with github actions
+
+pre commit for repos using software factory should triggera precommit that applies bare minimum fixes like closing braces
+found one edge case in substitution validator. cannot validate substitions that require build dependencies.. for example bpmsoft SIOC-SYS0-BP06.substiution requires a .db file as a template file that is a build product... so something will have to be done.

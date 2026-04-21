@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-IOC IDE - Integrated Development Environment for EPICS IOCs
+APP IDE - Integrated Development Environment for EPICS IOCs
 ============================================================
 A comprehensive IDE for managing, validating, and monitoring EPICS IOCs
 with focus on configuration health, status monitoring, and template management.

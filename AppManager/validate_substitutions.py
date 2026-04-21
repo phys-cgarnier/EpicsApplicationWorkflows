@@ -22,7 +22,7 @@ def main():
     sys.path.insert(0, str(appmanager_dir))
 
     try:
-        from app_validation_engine import ValidationEngine
+        from AppManager.tools.validation_engine import ValidationEngine
     except Exception as e:
         print(f"Error importing ValidationEngine: {e}", file=sys.stderr)
         sys.exit(2)
