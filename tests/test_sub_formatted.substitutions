@@ -1,0 +1,8 @@
+#
+file test.db
+{
+    pattern   { PLC_NAME,     PLCTAG,   PRIM,  AREA      }
+              { $(PLC_NAME),  SV41010,  CSV,   CP$(CP)4  }
+              { $(PLC_NAME),  SV41030,  CSV,   CP$(CP)4  }
+}
+#

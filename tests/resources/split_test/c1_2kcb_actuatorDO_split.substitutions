@@ -1,0 +1,8 @@
+file c1_2kcb_actuatorDO.db
+{
+    pattern   { PLC_NAME,     PLCTAG,   PIDTAG,         PRIM,  AREA,      LOCA,  ZNAM,   ONAM,  EN,    DIS,    DESC              }
+              { $(PLC_NAME),  SV41010,  C$(CP)SV41010,  CSV,   CP$(CP)4,  1010,  Close,  Open,  OPEN,  CLOSE,  "Gate Valve"      }
+              { $(PLC_NAME),  SV41030,  C$(CP)SV41030,  CSV,   CP$(CP)4,  1030,  Close,  Open,  OPEN,  CLOSE,  "Foreline Valve"  }
+              { $(PLC_NAME),  SV41160,  C$(CP)SV41160,  CSV,   CP$(CP)4,  1160,  Off,    On,    ON,    OFF,    "CC Outlet"       }
+}
+#

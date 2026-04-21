@@ -1,0 +1,7 @@
+file c1_2kcb_ai.db
+{
+    pattern   { PLC_NAME,     AREA,      LOCA,  PRIM,  TYPE,  PLCTAG,        PIDTAG,              EGU,       PREC,  LOLO,  LOW,  HIGH,  HIHI,  LLSV,      LSV,       HSV,       HHSV,      HYST,  DESC                  }
+              { $(PLC_NAME),  CP$(CP)4,  1021,  CTT,   HIGH,  TT41021_HIGH,  C$(CP)TT41021_HIGH,  "Kelvin",  2,     0.0,   0.0,  0.0,   0.0,   NO_ALARM,  NO_ALARM,  NO_ALARM,  NO_ALARM,  0.0,   "HIGH Resolution"     }
+              { $(PLC_NAME),  CP$(CP)4,  1021,  CTT,   CTRL,  TT41021_CTRL,  C$(CP)TT41021_CTRL,  "Kelvin",  2,     0.0,   0.0,  0.0,   0.0,   NO_ALARM,  NO_ALARM,  NO_ALARM,  NO_ALARM,  0.0,   "Control Resolution"  }
+}
+#
